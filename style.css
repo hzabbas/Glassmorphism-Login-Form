@@ -1,0 +1,205 @@
+html {
+    box-sizing: border-box;
+}
+* , 
+*::before ,
+*::after {
+    box-sizing: inherit;
+    margin: 0px;
+}
+input, button{
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+body{
+    font-family: 'Poppins';
+    background-color: #070810;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.shape{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.shape__one{
+    background: linear-gradient(#0D47A1, #42A5F5);
+    top: -80px;
+    left: -80px;
+}
+.shape__two{
+    background: linear-gradient(45deg, #E65100, #FFA726);
+    bottom: -90px;
+    right: -60px;
+}
+.wrapper {
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+form {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 50px 35px 35px 35px;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.13);
+    border-radius: 35px 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+.form__title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.form__input-wrapper{
+    margin-bottom: 30px;
+}
+.form__lable{
+    font-size: 16px;
+}
+.form__input{
+    display: block;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    height: 50px;
+    padding: 0px 10px;
+    color: #fff;
+}
+.form__input::placeholder {
+    color: #e5e5e5;
+}
+.btn__login {
+    
+	width: 100%;
+    margin-bottom: 20px;
+	display: flex;
+    justify-content: center; 
+
+}
+.btn__login .btn {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 50px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn__login .btn a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 10px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	overflow: hidden;
+	color: #fff;
+	font-weight: 400px;
+	z-index: 1;
+	transition: 0.5s;
+	backdrop-filter: blur(15px);
+}
+.btn__login .btn:hover a {
+	letter-spacing: 3px;
+    font-weight: bold;
+}
+.btn__login .btn a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(206, 202, 202, 0.15), transparent);
+	transform: skewX(45deg) translate(0);
+	transition: 0.5s;
+	filter: blur(0px);
+}
+.btn__login .btn:hover a::before {
+	transform: skewX(45deg) translate(200px);
+}
+.btn__login .btn::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	background: #f00;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.btn__login .btn:hover::before /*lightup button*/ {
+	bottom: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+
+.btn__login .btn::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	top: -5px;
+	width: 30px;
+	height: 10px;
+	background: #f00;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.btn__login .btn:hover::after /*lightup button*/ {
+	top: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+.btn__login .btn:nth-child(1)::before, /*chnage 1*/
+.btn__login .btn:nth-child(1)::after {
+    background: #1eff45;
+	box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
+		0 0 60px #1eff45;
+}
+.social {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 35px 10px;
+    border: 2px solid rgba(255,255,255,0.13);
+    width: 100%;
+    padding: 15px 15px;
+}
+.go , .fb {
+    font-size: 1rem;
+    border: 2px solid rgba(255,255,255,0.13);
+    border-radius: 35px 10px;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+.go:hover , .fb:hover{
+    cursor: pointer;
+    color: #f00;
+}
